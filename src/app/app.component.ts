@@ -9,5 +9,26 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'justGoDoIt';
+  images: Image[] = [];
+  constructor() {
+    this.images = [
+      {
+        url: "https://abc.com",
+        name: "n",
+
+      },
+      
+      {
+        url: "https://def.com",
+        name: "n",
+
+      }
+    ]
+  }
+}
+
+export interface Image {
+  url: string,
+  name?: string,
+  description?: string | null
 }
